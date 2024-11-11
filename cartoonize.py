@@ -9,7 +9,7 @@ class Cartoonize:
     def __init__(self, visualize: bool = True):
         self.visualize = visualize
         self.image = None
-        self.upload_image()
+        # self.upload_image()
 
     def upload_image(self):
         self.upload_widget = FileUpload(accept='', multiple=False)
