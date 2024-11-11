@@ -1,5 +1,5 @@
 # Cartoonize Image with Computer Vision
-This repo contains the code of cartoonizing an image with Computer Vision. This provides a step-by-step process on cartoonizing with an example; please refer to ```cartoonize_visualize.ipynb``` to cartoonize custom images. 
+This repo contains the code of cartoonizing an image with Computer Vision. This provides a step-by-step process on cartoonizing with an example; please refer to [```cartoonize_visualize.ipynb```](https://github.com/ipjoshua1483/cartoonize_image_with_computer_vision/blob/main/cartoonize_visualize.ipynb) to cartoonize custom images. 
 
 ## Installation
 Install python verison 3.12.7 and run the following commands:
