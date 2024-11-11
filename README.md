@@ -28,21 +28,27 @@ cartoonize_obj.display_image()
 cartoonize_obj.color_quantization()
 cartoonize_obj.display_image()
 ```
-![image_original](/images/test_color_quantization.png)
+<div align="center">
+  <img src="/images/test_color_quantization.png" alt="Image with Color Quantization"/>
+</div>
 
 ## Apply a bilateral filter to further blur the image
 ```python
 cartoonize_obj.bilateral_filter()
 cartoonize_obj.display_image()
 ```
-![image_original](/images/test_bilateral_filter.png)
+<div align="center">
+  <img src="/images/test_bilateral_filter.png" alt="Image with Bilateral Filter"/>
+</div>
 
 ## Create an edge mask and use bitwise operations to insert them into the image
 ```python
 cartoonize_obj.edge_mask()
 cartoonize_obj.display_image()
 ```
-![image_original](/images/test_edge_mask.png)
+<div align="center">
+  <img src="/images/test_edge_mask.png" alt="Image with Edge Mask"/>
+</div>
 
 
 
