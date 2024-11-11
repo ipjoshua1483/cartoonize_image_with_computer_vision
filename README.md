@@ -15,7 +15,7 @@ cartoonize_obj = cartoonize.Cartoonize()
 cartoonize_obj.upload_image()
 ```
 
-## Display image
+## Display original image
 ```python
 cartoonize_obj.display_image()
 ```
