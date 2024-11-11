@@ -22,7 +22,7 @@ cartoonize_obj.display_image()
 
 ![image_original](/images/test_original.png)
 
-## Reduce color palette via color quantization. This done with K-means clustering.
+## Reduce color palette via color quantization through K-means clustering.
 ```python
 cartoonize_obj.color_quantization()
 cartoonize_obj.display_image()
