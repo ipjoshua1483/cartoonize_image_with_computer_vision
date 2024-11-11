@@ -6,22 +6,23 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 class Cartoonize:
-    def __init__(self, visualize: bool = True):
-        self.visualize = visualize
+    def __init__(self):
         self.image = None
-        # self.upload_image()
 
     def upload_image(self):
         self.upload_widget = FileUpload(accept='', multiple=False)
-        display(self.upload_widget)  
+        display(self.upload_widget)
+
+    def load_image(self):
+        self.image = cv2.imdecode(self.file_content, cv2.IMREAD_COLOR)
+        self.image_original = self.image.copy()
 
     def _check_upload_widget(self):
         if self.upload_widget.value:
             try:
                 content = self.upload_widget.value[0]['content']
                 self.file_content = np.frombuffer(content, np.uint8)
-                self.image = cv2.imdecode(self.file_content, cv2.IMREAD_COLOR) # cv2.imread(self.file_content)
-                self.image_original = self.image.copy()
+                self.load_image()
             except:
                 print("Please upload an image")
     
