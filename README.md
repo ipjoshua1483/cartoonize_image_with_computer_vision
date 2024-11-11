@@ -5,7 +5,7 @@ This repo contains the code of cartoonizing an image with Computer Vision. This 
 Install python verison 3.12.7 and run the following commands:
 
 ```bash
-pip install -r requirements.txt
+pip install -r requirements_local.txt
 ```
 
 ## Upload image
