@@ -12,6 +12,7 @@ pip install -r requirements.txt
 ```python
 import cartoonize
 cartoonize_obj = cartoonize.Cartoonize()
+cartoonize_obj.display_image()
 ```
 ![image_original](/images/test_original.png)
 
