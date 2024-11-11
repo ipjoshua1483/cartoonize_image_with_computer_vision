@@ -13,16 +13,17 @@ class Cartoonize:
         self.upload_widget = FileUpload(accept='', multiple=False)
         display(self.upload_widget)
 
-    def load_image(self):
-        self.image = cv2.imdecode(self.file_content, cv2.IMREAD_COLOR)
+    def load_image(self, content):
+        file_content = np.frombuffer(content, np.uint8)
+        self.image = cv2.imdecode(file_content, cv2.IMREAD_COLOR)
         self.image_original = self.image.copy()
+        self._edge_mask_before()
 
     def _check_upload_widget(self):
         if self.upload_widget.value:
             try:
                 content = self.upload_widget.value[0]['content']
-                self.file_content = np.frombuffer(content, np.uint8)
-                self.load_image()
+                self.load_image(content)
             except:
                 print("Please upload an image")
     
@@ -49,12 +50,13 @@ class Cartoonize:
             self.image, d = 7, sigmaColor = 200, sigmaSpace = 200
         )
 
-    def edge_mask(self, line_size = 7, blur_value = 7):
+    def _edge_mask_before(self, line_size = 7, blur_value = 7):
         gray = cv2.cvtColor(self.image, cv2.COLOR_BGR2GRAY)
         gray_blur = cv2.medianBlur(gray, blur_value)
-        edges = cv2.adaptiveThreshold(
+        self.edges = cv2.adaptiveThreshold(
             gray_blur, 255, cv2.ADAPTIVE_THRESH_MEAN_C, cv2.THRESH_BINARY, line_size, blur_value
         )
-        self.image = cv2.bitwise_and(self.image, self.image, mask = edges)
-
+        # self.image = cv2.bitwise_and(self.image, self.image, mask = self.edges)
     
+    def edge_mask(self):
+        self.image = cv2.bitwise_and(self.image, self.image, mask = self.edges)
