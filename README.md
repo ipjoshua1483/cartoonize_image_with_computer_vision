@@ -12,8 +12,14 @@ pip install -r requirements.txt
 ```python
 import cartoonize
 cartoonize_obj = cartoonize.Cartoonize()
+cartoonize_obj.upload_image()
+```
+
+## Display image
+```python
 cartoonize_obj.display_image()
 ```
+
 ![image_original](/images/test_original.png)
 
 ## Reduce color palette via color quantization. This done with K-means clustering.
