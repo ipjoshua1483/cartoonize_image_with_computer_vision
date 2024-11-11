@@ -6,5 +6,7 @@ Install python verison 3.12.7 and run the following commands:
 ```pip install -r requirements.txt```
 
 ## Upload image
-```import cartoonize```
-```cartoonize_obj = cartoonize.Cartoonize()```
+\```python
+import cartoonize
+cartoonize_obj = cartoonize.Cartoonize()
+\```
