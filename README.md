@@ -19,8 +19,9 @@ cartoonize_obj.upload_image()
 ```python
 cartoonize_obj.display_image()
 ```
-
-![image_original](/images/test_original.png)
+<div align="center">
+  <img src="/images/test_original.png" alt="Original Image"/>
+</div>
 
 ## Reduce color palette via color quantization through K-means clustering.
 ```python
