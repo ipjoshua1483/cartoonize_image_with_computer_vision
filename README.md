@@ -1,5 +1,22 @@
 # Cartoonize Image with Computer Vision
-This repo contains the code of cartoonizing an image with Computer Vision. This provides a step-by-step process on cartoonizing with an example; please refer to [```cartoonize_visualize.ipynb```](https://github.com/ipjoshua1483/cartoonize_image_with_computer_vision/blob/main/cartoonize_visualize.ipynb) to cartoonize custom images. 
+This repo contains the code of cartoonizing custom images with Computer Vision. The webapp deployed with Flask on AWS can be found here: [(https://tinyurl.com/ipjoshua-cartoon-CV)](https://tinyurl.com/ipjoshua-cartoon-CV) and the jupyter notebook that cartoonizes locally can be found here: [```cartoonize_visualize.ipynb```](https://github.com/ipjoshua1483/cartoonize_image_with_computer_vision/blob/main/cartoonize_visualize.ipynb).
+This README provides a step-by-step process on cartoonizing with an example.
+
+# Cartoonize with webapp deployed with Flask on AWS
+
+<div align="center">
+  <img src="/images/webapp_1.png" alt="Webapp home"/>
+</div>
+
+The [link](https://tinyurl.com/ipjoshua-cartoon-CV) to the webapp will direct you to this page. To cartoonize an image, first click on 'Browse' and select an image, then click on 'Cartoonize' to convert it.
+
+<div align="center">
+  <img src="/images/webapp_2.png" alt="Webapp cartoonized"/>
+</div>
+
+This will display the original and cartoonized images side-by-side. Click on 'Download Cartoonized Image' to download and click on 'Cartoonize Another Image' to repeat this process on another image of your choice.
+
+# Cartoonize locally with jupyter notebook
 
 ## Installation
 Install python verison 3.12.7 and run the following commands:
