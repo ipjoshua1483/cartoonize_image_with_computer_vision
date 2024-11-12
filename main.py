@@ -48,7 +48,10 @@ def upload_file():
             cartoonize_obj.save_image(cartoonized_filepath, original = False)
             # return redirect(url_for('display_image', filename=cartoonized_filename))
             return redirect(
-                url_for('display_images', original_filename = filename, cartoonized_filename = cartoonized_filename)
+                url_for('display_images', 
+                original_filename = filename, 
+                cartoonized_filename = cartoonized_filename
+                )
             )
     return render_template('upload.html')
 
@@ -65,4 +68,4 @@ def display_images():
 if __name__ == "__main__":
     # Ensure the upload folder exists
     os.makedirs(app.config['UPLOAD_FOLDER'], exist_ok=True)
-    app.run(debug=True)
+    app.run(debug = False)
