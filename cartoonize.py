@@ -19,6 +19,12 @@ class Cartoonize:
         self.image_original = self.image.copy()
         self._edge_mask_before()
 
+    def save_image(self, file_path, original: bool = True):
+        if original:
+            cv2.imwrite(file_path, self.image_original)
+        else:
+            cv2.imwrite(file_path, self.image)
+
     def _check_upload_widget(self):
         if self.upload_widget.value:
             try:

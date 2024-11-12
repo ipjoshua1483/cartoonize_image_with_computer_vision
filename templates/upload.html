@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Image</title>
+    <style>
+        /* Center and fix the first container */
+        .fixed-container {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%); /* Center the container */
+            max-width: 1200px;
+        }
+
+        .title-container {
+            text-align: center;
+        }
+
+        .desciption-container {
+            text-align: justify;
+        }
+
+
+        /* Style for the main title */
+        .main-title {
+            white-space: nowrap; /* Prevent line break */
+            font-size: 2em; /* Adjust size if needed */
+            margin: 0;
+        }
+
+        /* Style for the descriptive title */
+        .sub-title {
+            font-size: 1em; /* Make it smaller than the main title */
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        .body-text {
+            font-size: 1em;
+            margin-top: 
+        }
+        /* Content container below the fixed container */
+        .content-container {
+            margin-top: 65vh; /* Push it below the fixed container */
+            text-align: center;
+        }
+
+        .flash-message {
+            color: black;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Centered and fixed container for the main content -->
+    <div class="fixed-container">
+        <div class="title-container">
+            <h1 class="main-title">Cartoonize Images with Computer Vision</h1>
+        </div>
+       <div class="desciption-container">
+            <h1 class="sub-title">The image is first transformed with color quantization via K-means clustering. Then a bilateral filter is applied to blur the image, which is then followed by applying an edge mask.</h1>
+       </div>
+        <div class="title-container">
+            <h1 class="sub-title">Upload an image (.jpg, .jpeg, .png)</h1>
+        </div>
+        <!-- File upload form -->
+        <div class="title-container">  
+            <form method="POST" enctype="multipart/form-data">
+                <input type="file" name="file">
+                <input type="submit" value="Cartoonize">
+            </form>
+        </div>  
+    </div>
+
+    <!-- Separate container for additional content (e.g., flash messages) -->
+    <div class="content-container">
+        <div class="flash-message">
+            {% with messages = get_flashed_messages() %}
+              {% if messages %}
+                {% for message in messages %}
+                  <p>{{ message }}</p>
+                {% endfor %}
+              {% endif %}
+            {% endwith %}
+        </div>
+    </div>
+</body>
+</html>
